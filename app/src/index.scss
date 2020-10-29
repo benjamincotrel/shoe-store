@@ -1,0 +1,23 @@
+* {
+    font-family: Noto Sans;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body {
+    height: 100%;
+}
+
+body  {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-print-color-adjust: exact !important;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
