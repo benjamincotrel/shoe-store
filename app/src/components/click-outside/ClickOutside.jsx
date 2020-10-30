@@ -26,7 +26,7 @@ const ClickOutside = React.forwardRef(({className = "", children, onClickOutside
 });
 
 ClickOutside.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     onClickOutside: PropTypes.func.isRequired,
     className: PropTypes.string
 };

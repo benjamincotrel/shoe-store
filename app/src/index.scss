@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 html, body {
@@ -12,7 +11,6 @@ body  {
     padding: 0;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    -webkit-print-color-adjust: exact !important;
 }
 
 #root {
