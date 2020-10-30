@@ -1,0 +1,10 @@
+@import '~sass/colors';
+
+.header {
+    display: flex;
+
+    height: 4.5rem;
+
+    background-color: $blank-primary;
+    box-shadow: 0 0.0625rem $box-shadow-primary;
+}

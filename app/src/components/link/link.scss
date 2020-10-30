@@ -1,0 +1,20 @@
+@import '~sass/colors';
+
+.link {
+    display: flex;
+    align-items: center;
+    
+    cursor: pointer;
+    padding: 0 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: $text-primary;
+
+    border-bottom: 0.25rem solid transparent;
+
+    &--selected {
+        border-bottom: 0.25rem solid $selected-primary;
+        cursor: default;
+    }
+}

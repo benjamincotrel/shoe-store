@@ -1,4 +1,10 @@
+@import '~sass/colors';
+
 .app {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     flex-grow: 1;
+
+    background-color: $background-primary;
 }

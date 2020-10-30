@@ -329,7 +329,9 @@ module.exports = function(webpackEnv) {
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
                 "react-native": "react-native-web",
                 state: path.resolve(__dirname, "../src/state"),
-                hooks: path.resolve(__dirname, "../src/hooks"),
+                infrastructure: path.resolve(__dirname, "../src/infrastructure"),
+                sass: path.resolve(__dirname, "../src/sass"),
+                components: path.resolve(__dirname, "../src/components"),
         // Allows for better profiling with ReactDevTools
                 ...(isEnvProductionProfile && {
                     "react-dom$": "react-dom/profiling",
