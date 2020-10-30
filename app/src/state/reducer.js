@@ -60,7 +60,7 @@ const handleNewSaleAdded = (state, { store, model, inventory }) => {
 
     return {
         ...state,
-        feed,
+        feed: feed.slice(0, 100),
         stores,
         models,
         topStores: topStores.sort((a, b) => b.sales - a.sales).slice(0, 3)
