@@ -50,7 +50,7 @@ const updateStoreModels = (storeModels, model, inventory) => {
         ];
     }
 
-    return models;
+    return models.sort((a, b) => a.inventory - b.inventory);
 };
 
 const updateModelStores = (modelStores, store, inventory) => {
@@ -75,7 +75,7 @@ const updateModelStores = (modelStores, store, inventory) => {
         ];
     }
 
-    return stores;
+    return stores.sort((a, b) => a.inventory - b.inventory);
 };
 
 export default {

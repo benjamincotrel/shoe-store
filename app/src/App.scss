@@ -1,4 +1,5 @@
 @import '~sass/colors';
+@import '~sass/breakpoints';
 
 .app {
     display: flex;
@@ -7,4 +8,12 @@
     flex-grow: 1;
 
     background-color: $background-primary;
+
+    &__container {
+        padding: 1rem;
+
+        @include medium {
+            padding: 2rem;
+        }
+    }
 }

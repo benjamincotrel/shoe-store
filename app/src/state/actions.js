@@ -6,3 +6,7 @@ export const addNewSale = (store, model, inventory) => ({
     model,
     inventory
 });
+
+export const toggleAlerting = () => ({
+    type: actionTypes.TOGGLE_ALERTING
+});

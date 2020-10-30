@@ -1,3 +1,4 @@
 const NAMESPACE = "APP";
 
 export const ADD_NEW_SALE = `${NAMESPACE}/ADD_NEW_SALE`;
+export const TOGGLE_ALERTING = `${NAMESPACE}/TOGGLE_ALERTING`;
