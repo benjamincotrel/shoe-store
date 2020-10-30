@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import {ReactComponent as First} from "./svg/first.svg";
-import {ReactComponent as Second} from "./svg/second.svg";
-import {ReactComponent as Third} from "./svg/third.svg";
+import { ReactComponent as First } from "./svg/first.svg";
+import { ReactComponent as Second } from "./svg/second.svg";
+import { ReactComponent as Third } from "./svg/third.svg";
 
 import "./top.scss";
 
