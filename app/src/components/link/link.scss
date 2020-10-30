@@ -1,4 +1,5 @@
 @import '~sass/colors';
+@import '~sass/breakpoints';
 
 .link {
     display: flex;
@@ -6,7 +7,7 @@
     
     cursor: pointer;
     padding: 0 1.5rem;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     font-size: 1.15rem;
     text-decoration: none;
     color: $text-primary;
@@ -16,5 +17,9 @@
     &--selected {
         border-bottom: 0.25rem solid $selected-primary;
         cursor: default;
+    }
+
+    @include small {
+        margin-right: 1.5rem;
     }
 }

@@ -3,7 +3,7 @@ const createStore = (stores, store, model, inventory) => {
         ...stores,
         {
             name: store,
-            model: [
+            models: [
                 {
                     name: model,
                     inventory
@@ -18,7 +18,7 @@ const createModel = (models, model, store, inventory) => {
         ...models,
         {
             name: model,
-            store: [
+            stores: [
                 {
                     name: store,
                     inventory
@@ -40,7 +40,7 @@ const updateStoreModels = (storeModels, model, inventory) => {
         return sm;
     });
 
-    if (!isNewModel) {
+    if (isNewModel) {
         models = [
             ...storeModels,
             {
@@ -65,7 +65,7 @@ const updateModelStores = (modelStores, store, inventory) => {
         return ms;
     });
 
-    if (!isNewStore) {
+    if (isNewStore) {
         stores = [
             ...modelStores,
             {

@@ -1,22 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const Feed = () => {
-    const feed = useSelector(state => state.feed);
+const Stores = () => {
+    const stores = useSelector(state => state.stores);
 
-    const renderFeedRow = (feedRow, index) => {
+    const renderStore = (store, index) => {
         return <div key={index}>
-            {feedRow.store}
-            {feedRow.model}
-            {feedRow.inventory}
+            {store.name}
         </div>;
     };
 
     return (
         <div>
-            {feed.map(renderFeedRow)}
+            {stores.map(renderStore)}
         </div>
     );
 };
 
-export default Feed;
+export default Stores;

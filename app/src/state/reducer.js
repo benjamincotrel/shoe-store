@@ -25,7 +25,7 @@ const handleNewSaleAdded = (state, { store, model, inventory }) => {
         return s;
     });
 
-    if (!isNewStore) {
+    if (isNewStore) {
         stores = reducerHelpers.createStore(state.stores, store, model, inventory);
     }
 
@@ -38,7 +38,7 @@ const handleNewSaleAdded = (state, { store, model, inventory }) => {
         return m;
     });
 
-    if (!isNewModel) {
+    if (isNewModel) {
         models = reducerHelpers.createModel(state.models, model, store, inventory);
     }
 
