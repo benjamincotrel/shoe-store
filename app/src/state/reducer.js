@@ -5,7 +5,8 @@ const defaultState = {
     feed: [],
     stores: [],
     models: [],
-    isAlertingDisabled: false
+    topStores: [],
+    isAlertingDisabled: true
 };
 
 const handleNewSaleAdded = (state, { store, model, inventory }) => {
@@ -16,6 +17,7 @@ const handleNewSaleAdded = (state, { store, model, inventory }) => {
 
     let isNewStore = true;
     let isNewModel = true;
+    let isNewTopStore = true;
 
     let stores = state.stores.map((s) => {
         if (s.name === store) {
@@ -43,11 +45,25 @@ const handleNewSaleAdded = (state, { store, model, inventory }) => {
         models = reducerHelpers.createModel(state.models, model, store, inventory);
     }
 
+    let topStores = state.topStores.map((t) => {
+        if (t.name === store) {
+            t.sales++;
+            isNewTopStore = false;
+        }
+
+        return t;
+    });
+
+    if (isNewTopStore) {
+        topStores = reducerHelpers.createTopStore(topStores, store);
+    }
+
     return {
         ...state,
         feed,
         stores,
-        models
+        models,
+        topStores: topStores.sort((a, b) => b.sales - a.sales).slice(0, 3)
     };
 };
 

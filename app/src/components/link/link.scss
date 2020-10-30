@@ -6,8 +6,7 @@
     align-items: center;
     
     cursor: pointer;
-    padding: 0 1.5rem;
-    margin-right: 1rem;
+    padding: 0 0.5rem;
     font-size: 1.15rem;
     text-decoration: none;
     color: $text-primary;
@@ -19,7 +18,7 @@
         cursor: default;
     }
 
-    @include small {
-        margin-right: 1.5rem;
+    @include medium {
+        padding: 0 1rem;
     }
 }

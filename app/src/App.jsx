@@ -12,6 +12,7 @@ import "./App.scss";
 const Feed = lazy(() => import("./feed/Feed"));
 const Stores = lazy(() => import("./stores/Stores"));
 const Models = lazy(() => import("./models/Models"));
+const Top = lazy(() => import("./top/Top"));
 
 const App = () => {
     const dispatch = useDispatch();
@@ -50,6 +51,7 @@ const App = () => {
                             <Route path="/feed" component={Feed} />
                             <Route path="/stores" component={Stores} />
                             <Route path="/models" component={Models} />
+                            <Route path="/top" component={Top} />
                             <Redirect to="/feed" />
                         </Switch>
                     </Suspense>

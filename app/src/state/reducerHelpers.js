@@ -28,6 +28,16 @@ const createModel = (models, model, store, inventory) => {
     ];
 };
 
+const createTopStore = (topStores, store) => {
+    return [
+        ...topStores, 
+        {
+            name: store,
+            sales: 1
+        }
+    ];
+};
+
 const updateStoreModels = (storeModels, model, inventory) => {
     let isNewModel = true;
 
@@ -82,5 +92,6 @@ export default {
     createStore,
     createModel,
     updateStoreModels,
-    updateModelStores
+    updateModelStores,
+    createTopStore
 };

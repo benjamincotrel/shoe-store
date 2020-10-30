@@ -23,7 +23,8 @@ const Header = () => {
             <Link to="/feed">Live Feed</Link>
             <Link to="/stores">Stores</Link>
             <Link to="/models">Models</Link>
-            <TextButton onClick={handleAlertingClicked}>{isAlertingDisabled ? "Enable Alerting" : "Disable Alerting"}</TextButton>
+            <Link to="/top">Top Stores</Link>
+            <TextButton className="header__alerting-button" onClick={handleAlertingClicked}>{isAlertingDisabled ? "Enable Alerting" : "Disable Alerting"}</TextButton>
         </header>
     );
 };
